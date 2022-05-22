@@ -28,7 +28,8 @@ a:hover {
 }
 
 .main {
-  flex: 0.8;
+  flex: .8;
+  /* padding-left: 20px; */
   width: 100%;
 }
 .routes {
@@ -75,7 +76,7 @@ a:hover {
 
 @media screen and (max-width: 1300px) {
   .main {
-    margin-left: 50px;
+    /* margin-left: 50px; */
   }
 }
 
