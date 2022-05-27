@@ -1,14 +1,15 @@
 import React from "react";
 import millify from "millify";
-import { Row, Col, Typography, Statistic,Spin } from "antd";
+import { Row, Col, Typography, Statistic,Spin} from "antd";
 
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import { Link } from "react-router-dom";
 import Crypto from "./Crypto";
+import News from "./News";
 
 const { Title } = Typography;
 const Homepage = () => {
-  const {data,isError,isFetching} = useGetCryptosQuery();
+  const {data,isFetching} = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
 
   if(isFetching){
@@ -43,7 +44,15 @@ const Homepage = () => {
           Show more
         </Link></Title>
       </div>
-      <Crypto/>
+      <Crypto simplified/>
+      <div className="home-heading-container">
+        <Title level={2} className="home-title">Latest Crypto news</Title>
+        <Title level={3} className="show-more"><Link to='/news'>
+          Show more
+        </Link></Title>
+      </div>
+
+      <News/>
     </>
   );
 };
