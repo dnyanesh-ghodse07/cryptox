@@ -10,6 +10,7 @@ import {
   News,
 } from "./Components";
 import "./App.css";
+import GlobalStats from "./Components/GlobalStats";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
               <Route exact path="/exchange" element={<Exchange />} />
               <Route exact path="/cryptocurrencies" element={<Crypto />} />
               <Route exact path="/crypto/:coinId" element={<CryptoDetail />} />
+              <Route exact path="/global-stats" element={<GlobalStats />} />
               <Route exact path="/news" element={<News />} />
             </Routes>
           </div>

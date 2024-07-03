@@ -10,6 +10,7 @@ const baseUrl = 'https://bing-news-search1.p.rapidapi.com'
 
 const createRequest = (url) => ({url, headers: createHeader})
 
+
 export const newsApi = createApi({
     reducerPath: 'newsApi',
     baseQuery: fetchBaseQuery({baseUrl}),
